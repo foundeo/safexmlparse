@@ -1,0 +1,45 @@
+{
+	"name":"SafeXmlParse",
+    "author":"Foundeo Inc / Pete Freitag",
+    "description":"A simple XML parser implementation that returns identical response to XmlParse.",
+    "devDependencies":{
+        "testbox":"^3.1.0+339"
+    },
+    "documentation":"https://github.com/foundeo/safexmlparse",
+    "homepage":"https://github.com/foundeo/safexmlparse",
+    "ignore":["/test/"],
+    "installPaths":{
+        "testbox":"test/testbox/"
+    },
+    "keywords":["xml","xmlparse"],
+    "license":[
+        {
+            "type":"MIT",
+            "URL":""
+        }
+    ],
+    "private":false,
+    "projectURL":"",
+    "location":"foundeo/safexmlparse#v0.0.0",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/foundeo/safexmlparse"
+    },
+    "scripts":{},
+    "shortDescription":"A simple XML parser implementation that returns identical response to XmlParse.",
+    "slug":"safexmlparse",
+    "testbox":{
+        "directory":"test.tests",
+        "recurse":true,
+        "runner":[
+            {
+                "default":"/test/run.cfm"
+            }
+        ],
+        "verbose":true,
+        "watchDelay":500,
+        "watchPaths":"**.cfc"
+    },
+    "type":"modules",
+    "version":"0.0.0"
+}
