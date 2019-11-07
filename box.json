@@ -25,12 +25,16 @@
     ],
     "private":false,
     "projectURL":"",
-    "location":"foundeo/safexmlparse#v0.0.0",
+    "location":"foundeo/safexmlparse#v1.0.0",
     "repository":{
         "type":"git",
         "URL":"https://github.com/foundeo/safexmlparse"
     },
-    "scripts":{},
+    "scripts":{
+        "postVersion":"package set location='foundeo/fixinator#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && git push --tags"
+    },
     "shortDescription":"A simple XML parser implementation that returns identical response to XmlParse.",
     "slug":"safexmlparse",
     "testbox":{
