@@ -1,5 +1,8 @@
 # SafeXmlParse
 
+[![Build Status](https://travis-ci.org/foundeo/safexmlparse.svg?branch=master)](https://travis-ci.org/foundeo/safexmlparse)
+
+
 A simple, lightweight XML Parser Implementation written purely in CFML. 
 
 This parser purposly does not implement features such as external entities, remote schemas, DTDs to
@@ -22,7 +25,7 @@ You can specify the following options in the `options` struct argument of the `p
 Here are the supported options:
 
 * `nestingLimit` - The number of nested tags allowed. This value can be specified to prevent _Coercive Parsing_ attacks. Default Value: `1000`
-* `tagLimit` - The maximum number of tags allowed. in the XML document This value can be specified to prevent _Coercive Parsing_ attacks. Default Value: `1000000`
+* `tagLimit` - The maximum number of tags allowed. in the XML document This value can be specified to prevent _Coercive Parsing_ attacks and Jumbo. Default Value: `1000000`
 
 
 ## Exceptions
