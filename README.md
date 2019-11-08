@@ -20,7 +20,7 @@ mitigate the security risks related to parsing untrusted XML.
 
 You can specify the following options in the `options` struct argument of the `parse` function:
 
-	xsp.parse(xml, {tagLimit=100});
+	sxp.parse(xml, {tagLimit=100});
 
 Here are the supported options:
 
@@ -40,5 +40,11 @@ Throws exceptions with the following `type` specified in the `cfcatch` struct:
 * `safexmlparse.element` - Thrown if the XML has a `!ELEMENT` defined
 
 The exception `message` will be generic such as `Invalid XML` or `Unsupported XML` and the `detail` of the exception will contain more technical details intended for the developer.
+
+## Known Issues & Limitations
+
+* Does not _yet_ support `CDATA` sections
+* Currently does not allow XML with `!DOCTYPE` `!ENTITY` or `!ELEMENT`, throws an Exception. It would be useful to have the option to simply ignore them, instead of throwing an exception.
+* Does not support `XmlRoot.dad.child` notation, instead you have to use `XmlChildren`
 
 References: [OWSAP XML Security CheatSheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
