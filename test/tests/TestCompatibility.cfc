@@ -62,11 +62,13 @@ component extends="BaseTest" {
 			expect(arrayLen(data.a.XmlChildren)).toBe(arrayLen(data.b.XmlChildren));		
 		});
 
-		//now run recursivly for each child
-		var i=0;
-		for (local.child in arguments.a.XmlChildren) {
-			i++;
-			matchingNodes(local.child, arguments.b.XmlChildren[i], name & "[#i#]/");
+		if (arrayLen(arguments.a.XmlChildren) == arrayLen(arguments.b.XmlChildren)) {
+			//now run recursivly for each child
+			var i=0;
+			for (local.child in arguments.a.XmlChildren) {
+				i++;
+				matchingNodes(local.child, arguments.b.XmlChildren[i], name & "[#i#]/");
+			}
 		}
 
 	}

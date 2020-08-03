@@ -77,11 +77,22 @@ component {
 			tagCount++;
 			if (left(node.XmlName, 1) == "/") {
 				//end tag
+
+				if (node.XmlName == "/lastmod") {
+					//throw(message=serializeJSON(local));
+				}
+
 				if (arrayLen(parentStack)) {
 					//pop the stack
-					parent = parentStack[arrayLen(parentStack)];
-					arrayDeleteAt(parentStack, arrayLen(parentStack));
-				}
+					if ("/" & parentStack[arrayLen(parentStack)].XmlName == node.XmlName) {
+						arrayDeleteAt(parentStack, arrayLen(parentStack));
+						if (arrayLen(parentStack)) {
+							parent = parentStack[arrayLen(parentStack)];	
+						} else {
+							parent = result.XmlRoot;
+						}
+					}
+				} 
 				nestLevel--;
 			} else {
 
@@ -105,6 +116,7 @@ component {
 					
 					if (hasChildren) {
 						parent = node;
+						arrayAppend(parentStack, node);
 						nestLevel++;
 					}
 				}
@@ -112,6 +124,7 @@ component {
 			
 			ltPos = nextLtPos;
 		}
+
 		return result;
 	}
 
