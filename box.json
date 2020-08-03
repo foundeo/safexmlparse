@@ -25,13 +25,13 @@
     ],
     "private":false,
     "projectURL":"",
-    "location":"foundeo/fixinator#v1.0.1",
+    "location":"foundeo/safexmlparse#v1.0.1",
     "repository":{
         "type":"git",
         "URL":"https://github.com/foundeo/safexmlparse"
     },
     "scripts":{
-        "postVersion":"package set location='foundeo/fixinator#v`package version`'",
+        "postVersion":"package set location='foundeo/safexmlparse#v`package version`'",
         "onRelease":"publish",
         "postPublish":"!git push && git push --tags"
     },
