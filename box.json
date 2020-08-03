@@ -25,7 +25,7 @@
     ],
     "private":false,
     "projectURL":"",
-    "location":"foundeo/safexmlparse#v1.0.0",
+    "location":"foundeo/fixinator#v1.0.1",
     "repository":{
         "type":"git",
         "URL":"https://github.com/foundeo/safexmlparse"
@@ -50,5 +50,5 @@
         "watchPaths":"**.cfc"
     },
     "type":"modules",
-    "version":"1.0.0"
+    "version":"1.0.1"
 }
